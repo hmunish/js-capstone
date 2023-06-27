@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"2dcb6eb7bb62fd8e8df4.png\";\n\n//# sourceURL=webpack://js-capstone/./assets/logo.png?");
+eval("module.exports = __webpack_require__.p + \"4735dde8350ec6fc661b.png\";\n\n//# sourceURL=webpack://js-capstone/./assets/logo.png?");
 
 /***/ })
 
