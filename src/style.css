@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 main{
@@ -38,4 +39,13 @@ header li{
 li.active{
   font-weight: 1000;
   text-decoration: underline;
+}
+
+.foot-page {
+  text-align: center;
+  border-top: 1px solid #000;
+}
+
+.foot-page a {
+  text-decoration: none;
 }
