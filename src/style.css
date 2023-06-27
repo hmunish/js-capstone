@@ -42,6 +42,53 @@ li.active{
   text-decoration: underline;
 }
 
+/* Article starts here */
+.article{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px 0;
+  padding: 100px 0;
+}
+
+.item-box{
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px 0;
+}
+
+.item-box > img{
+  width: 50%;
+  height: 150px;
+}
+
+.item-box > h3{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-box > p{
+  width: 50%;
+  text-align: right;
+}
+
+button.comments{
+  width: 50%;
+  padding: 5px 0;
+  background: none;
+  font-weight: 1000;
+  box-shadow: 5px 5px 3px;
+  border: 3px solid;
+}
+/* Article ends here */
+
 .foot-page {
   text-align: center;
   border-top: 1px solid #000;
