@@ -42,6 +42,31 @@ li.active{
   text-decoration: underline;
 }
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.comments h3 {
+  margin-bottom: 10px;
+}
+
+.comments form input,
+.comments form button {
+  margin-top: 10px;
+}
+
 .foot-page {
   text-align: center;
   border-top: 1px solid #000;
