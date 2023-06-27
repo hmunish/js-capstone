@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
 body {
+  font-family: 'Poppins', sans-serif;
   background-color: burlywood;
+}
+
+.foot-page {
+  text-align: center;
+  border-top: 1px solid #000;
+}
+
+.foot-page a {
+  text-decoration: none;
 }
