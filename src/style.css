@@ -1,3 +1,41 @@
-body {
-  background-color: burlywood;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header{
+  width: 80%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo{
+  width: 20%;
+}
+
+header ul{
+  list-style: none;
+  display: flex;
+  gap: 0 50px;
+}
+
+header li{
+  font-size: 1.1rem;
+}
+
+li.active{
+  font-weight: 1000;
+  text-decoration: underline;
 }
