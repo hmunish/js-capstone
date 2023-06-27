@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
 }
 
-main{
+main {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -16,7 +16,7 @@ main{
   justify-content: space-between;
 }
 
-header{
+header {
   width: 80%;
   padding: 10px 0;
   display: flex;
@@ -24,27 +24,27 @@ header{
   justify-content: space-around;
 }
 
-.logo{
+.logo {
   width: 20%;
 }
 
-header ul{
+header ul {
   list-style: none;
   display: flex;
   gap: 0 50px;
 }
 
-header li{
+header li {
   font-size: 1.1rem;
 }
 
-li.active{
+li.active {
   font-weight: 1000;
   text-decoration: underline;
 }
 
 /* Article starts here */
-.article{
+.article {
   width: 80%;
   display: flex;
   justify-content: space-around;
@@ -54,7 +54,7 @@ li.active{
   padding: 100px 0;
 }
 
-.item-box{
+.item-box {
   flex-basis: 33%;
   display: flex;
   flex-direction: column;
@@ -63,24 +63,24 @@ li.active{
   gap: 15px 0;
 }
 
-.item-box > img{
+.item-box > img {
   width: 50%;
   height: 150px;
 }
 
-.item-box > h3{
+.item-box > h3 {
   width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.item-box > p{
+.item-box > p {
   width: 50%;
   text-align: right;
 }
 
-button.comments{
+button.comments {
   width: 50%;
   padding: 5px 0;
   background: none;
