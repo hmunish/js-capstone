@@ -48,6 +48,13 @@ async function getComments(itemId) {
   }
 }
 
+async function getLikes() {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/MEyKHZs5GQJjgTbCoZJe/likes')
+
+  const data = await response.json()
+    console.log(data)
+}
+
 const updateLikeCount = async (itemId) => {
   try {
     const fetchData = await fetch(
@@ -69,4 +76,4 @@ const updateLikeCount = async (itemId) => {
   }
 };
 
-export { getComments, createComment, updateLikeCount };
+export { getComments, createComment, updateLikeCount, getLikes };
