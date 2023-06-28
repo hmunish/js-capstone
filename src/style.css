@@ -106,7 +106,7 @@ button.comments {
   width: 50%;
   min-height: 95vh;
   margin: auto;
-  position: fixed;
+  /* position: fixed; */
   top: 2%;
   padding: 15px 0;
   display: flex;
