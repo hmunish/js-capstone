@@ -1,4 +1,7 @@
+import { commentsCount } from './counters.js';
 import { appId, createComment } from './involvement.js';
+
+const commentsCountValue = commentsCount();
 
 function removeCommentPopup(e) {
   e.target.removeEventListener('click', removeCommentPopup);
@@ -43,7 +46,7 @@ function renderCommentPopup(dataObj, commentsArr) {
     </div>
 
     <div class="comments-box">
-      <h3 class="comments-title">Comments (2)</h3>
+      <h3 class="comments-title">Comments (${commentsCountValue})</h3>
       <div class="comments-wrapper">
       </div>
     </div>
