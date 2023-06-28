@@ -1,16 +1,4 @@
-// async function createApp(url) {
-//   try {
-//     const res = await fetch(url, {
-//       method: 'POST',
-//     });
-//     if (!res.ok) throw new Error('Failed to create a new app');
-//     const data = await res.text();
-//     console.log(data);
-//     return data;
-//   } catch (err) {
-//     return err;
-//   }
-// }
+const appId = 'MEyKHZs5GQJjgTbCoZJe';
 
 async function createComment(appId, itemId, userName, userComment) {
   try {
@@ -83,5 +71,5 @@ const updateLikeCount = async (itemId) => {
 };
 
 export {
-  getComments, createComment, updateLikeCount, getLikes,
+  appId, getComments, createComment, updateLikeCount, getLikes,
 };

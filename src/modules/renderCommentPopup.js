@@ -1,9 +1,29 @@
+import { appId, createComment } from './involvement.js';
+
 function removeCommentPopup(e) {
   e.target.removeEventListener('click', removeCommentPopup);
   document.querySelector('dialog').remove();
 }
 
-function renderCommentPopup(dataObj) {
+function addComment(e) {
+  e.preventDefault();
+  const username = e.target.userName.value;
+  const userComments = e.target.userComment.value;
+  const dataId = e.target.getAttribute('data-id');
+
+  createComment(appId, dataId, username, userComments).then(() => {
+    const today = new Date();
+    const html = `<p class="comments-text">${today.getFullYear()}-${
+      today.getMonth() + 1
+    }-${today.getDate()} ${username}: ${userComments}`;
+    document
+      .querySelector('.comments-wrapper')
+      .insertAdjacentHTML('beforeend', html);
+    e.target.reset();
+  });
+}
+
+function renderCommentPopup(dataObj, commentsArr) {
   const html = `<dialog class="comments-popup">
   <i class="fa fa-close popup-close-icon"></i>
   <div class="wrapper">
@@ -25,14 +45,12 @@ function renderCommentPopup(dataObj) {
     <div class="comments-box">
       <h3 class="comments-title">Comments (2)</h3>
       <div class="comments-wrapper">
-        <p class="comments-text">03/11/2021 Alex: I'd love to buy it</p>
-        <p class="comments-text">03/11/2021 Alex: I'd love to buy it</p>
       </div>
     </div>
 
     <div class="add-comment-box">
       <h3 class="add-comment-title">Add a comment</h3>
-      <form class="add-comment">
+      <form class="add-comment" data-id=${dataObj.id - 1}>
         <input
           type="text"
           name="userName"
@@ -54,8 +72,21 @@ function renderCommentPopup(dataObj) {
 
   document.body.insertAdjacentHTML('beforeend', html);
 
-  //   Adding event listener on close icon for closing the popup on click
+  // Adding comments for the popup
+  if (commentsArr.length > 0) {
+    const commentsSection = document.querySelector('.comments-wrapper');
+    let commentsHtml = '';
+    commentsArr.forEach((e) => {
+      commentsHtml += `<p class="comments-text">${e.creation_date} ${e.username}: ${e.comment}</p>`;
+    });
+    commentsSection.insertAdjacentHTML('beforeend', commentsHtml);
+  }
 
+  // Adding event listener for submitting comment form
+  const commentForm = document.querySelector('.add-comment');
+  commentForm.addEventListener('submit', addComment);
+
+  //   Adding event listener on close icon for closing the popup on click
   const closeIcon = document.querySelector('.popup-close-icon');
   closeIcon.addEventListener('click', removeCommentPopup);
 }
