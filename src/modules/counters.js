@@ -1,11 +1,10 @@
-const moviesCounter = function () {
+const moviesCounter = () => {
   const movies = document.querySelectorAll('.item-box');
   return movies.length;
 };
 
 const commentsCount = () => {
-  const comments = document.querySelectorAll('.comment-text');
-  console.log(comments.value);
+  const comments = document.querySelectorAll('.comments-text');
   return comments.length;
 };
 export { commentsCount, moviesCounter };

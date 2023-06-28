@@ -10,9 +10,9 @@ describe('commentCount', () => {
   test('returns the correct count of comments', () => {
     // Arrange
     document.body.innerHTML = `
-    <div class="comments-text">Comment 1</div>
-    <div class="comments-text">Comment 2</div>
-    <div class="comments-text">Comment 3</div>
+    <div class="comments-text">Comment (1)</div>
+    <div class="comments-text">Comment (2)</div>
+    <div class="comments-text">Comment (3)</div>
     `;
 
     // Act

@@ -1,8 +1,6 @@
 import { commentsCount } from './counters.js';
 import { appId, createComment } from './involvement.js';
 
-const commentsCountValue = commentsCount();
-
 function removeCommentPopup(e) {
   e.target.removeEventListener('click', removeCommentPopup);
   document.querySelector('dialog').remove();
@@ -23,6 +21,11 @@ function addComment(e) {
       .querySelector('.comments-wrapper')
       .insertAdjacentHTML('beforeend', html);
     e.target.reset();
+
+    // Update the comments count after adding a new comment
+    const commentsCountValue = commentsCount();
+    const commentsCountElement = document.querySelector('.comments-title');
+    commentsCountElement.textContent = `Comments (${commentsCountValue})`;
   });
 }
 
@@ -46,8 +49,8 @@ function renderCommentPopup(dataObj, commentsArr) {
     </div>
 
     <div class="comments-box">
-      <h3 class="comments-title">Comments (${commentsCountValue})</h3>
       <div class="comments-wrapper">
+        <h3 class="comments-title">Comments (${commentsCount()})</h3>
       </div>
     </div>
 
