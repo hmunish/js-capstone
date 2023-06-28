@@ -21,11 +21,6 @@ function addComment(e) {
       .querySelector('.comments-wrapper')
       .insertAdjacentHTML('beforeend', html);
     e.target.reset();
-
-    // Update the comments count after adding a new comment
-    const commentsCountValue = commentsCount();
-    const commentsCountElement = document.querySelector('.comments-title');
-    commentsCountElement.textContent = `Comments (${commentsCountValue})`;
   });
 }
 
@@ -86,6 +81,12 @@ function renderCommentPopup(dataObj, commentsArr) {
       commentsHtml += `<p class="comments-text">${e.creation_date} ${e.username}: ${e.comment}</p>`;
     });
     commentsSection.insertAdjacentHTML('beforeend', commentsHtml);
+
+    // Update the comment count
+    const commentsCountElement = document.querySelector('.comments-title .comment-count');
+    const currentCommentCount = parseInt((commentsCountElement.textContent), 10);
+    const newCommentCount = currentCommentCount + commentsArr.length;
+    commentsCountElement.textContent = newCommentCount;
   }
 
   // Adding event listener for submitting comment form
