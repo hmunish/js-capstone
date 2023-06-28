@@ -3,6 +3,7 @@ import logo from '../assets/logo.png';
 import fetchItems from './modules/fetchItems.js';
 import renderItems from './modules/renderItems.js';
 import renderCommentPopup from './modules/renderCommentPopup.js';
+import { moviesCounter } from './modules/counters.js';
 import {
   getComments,
   updateLikeCount,
@@ -11,6 +12,7 @@ import {
 
 const mainLogo = document.querySelector('.logo');
 const article = document.querySelector('.article');
+const moviesNav = document.querySelector('.movies-nav');
 
 let episodesData;
 let likesObj;
@@ -27,7 +29,8 @@ window.addEventListener('DOMContentLoaded', async () => {
   likesData.forEach((e) => {
     likesObj[e.item_id] = e.likes;
   });
-  renderItems(article, episodesData, likesObj);
+  await renderItems(article, episodesData, likesObj);
+  moviesNav.insertAdjacentText('beforeend', `(${moviesCounter()})`);
 });
 
 // Click event on article
