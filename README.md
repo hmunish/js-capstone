@@ -32,7 +32,7 @@
 # 📖 [TVMAZE] <a name="about-project"></a>
 
 **TVMAZE**
-TVmaze is a free online TV database and guide that provides information about TV shows, episodes, cast and crew, ratings, and more. It allows users to browse and search for their favorite TV shows, view episode guides, and track their progress. TVmaze also offers an API that developers can use to access TV show data and integrate it into their own applications.
+The app TVmaze is a free online TV database and guide that provides information about TV shows, episodes, cast and crew, ratings, and more. It allows users to browse and search for their favorite TV shows, view episode guides, and track their progress. TVmaze also offers an API that developers can use to access TV show data and integrate it into their own applications.
 
 **Goal**
 The goal of the TVMAZE App is to provide users with a comprehensive platform for discovering, exploring, and keeping track of TV shows. It aims to enhance the TV viewing experience by offering features such as:
