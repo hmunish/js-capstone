@@ -48,6 +48,24 @@ async function getComments(itemId) {
   }
 }
 
+const updateLikeCount = async(itemId) => {
+  try {
+    const fetchData = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/app/MEyKHZs5GQJjgTbCoZJe/likes`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        item_id: itemId,
+      }),
+    });
+    if (!fetchData.ok) throw new Error('like cannot be add')
+    console.log(fetchData)
+  } catch (e) {
+    console.log(e)
+  }
+}
+
 // async function createLike(id, uName) {
 //   const res = await fetch(
 //     "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/MEyKHZs5GQJjgTbCoZJe/comments",
@@ -73,4 +91,4 @@ async function getComments(itemId) {
 //     console.log(data)
 // }
 
-export { getComments, createComment };
+export { getComments, createComment, updateLikeCount};

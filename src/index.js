@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import fetchItems from "./modules/fetchItems.js";
 import renderItems from "./modules/renderItems.js";
 import renderCommentPopup from "./modules/renderCommentPopup.js";
-import { createComment, getComments } from "./modules/involvement.js";
+import { createComment, getComments, updateLikeCount } from "./modules/involvement.js";
 
 const appId = "MEyKHZs5GQJjgTbCoZJe";
 
@@ -17,6 +17,7 @@ let episodesData;
 
 // Setting logo
 mainLogo.setAttribute("src", logo);
+updateLikeCount(50)
 
 // Event listeners
 window.addEventListener("DOMContentLoaded", async () => {
