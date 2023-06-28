@@ -48,47 +48,25 @@ async function getComments(itemId) {
   }
 }
 
-const updateLikeCount = async(itemId) => {
+const updateLikeCount = async (itemId) => {
   try {
-    const fetchData = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/app/MEyKHZs5GQJjgTbCoZJe/likes`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        item_id: itemId,
-      }),
-    });
-    if (!fetchData.ok) throw new Error('like cannot be add')
-    console.log(fetchData)
+    const fetchData = await fetch(
+      "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/MEyKHZs5GQJjgTbCoZJe/likes",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          item_id: itemId,
+        }),
+      }
+    );
+    if (!fetchData.ok) throw new Error("like cannot be add");
+    return fetchData;
   } catch (e) {
-    console.log(e)
+    console.log(e);
   }
-}
+};
 
-// async function createLike(id, uName) {
-//   const res = await fetch(
-//     "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/MEyKHZs5GQJjgTbCoZJe/comments",
-//     {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({
-//           item_id: id,
-//           username: uName,
-//           comment: 'Good comments'
-//         }),
-//     }
-//   );
-//   console.log(res);
-// }
-
-// async function getComments(id){
-//     const res = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/MEyKHZs5GQJjgTbCoZJe/comments?item_id=100');
-//     const data = await res.text();
-
-//     console.log(data)
-// }
-
-export { getComments, createComment, updateLikeCount};
+export { getComments, createComment, updateLikeCount };
