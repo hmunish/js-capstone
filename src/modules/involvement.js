@@ -49,10 +49,16 @@ async function getComments(itemId) {
 }
 
 async function getLikes() {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/MEyKHZs5GQJjgTbCoZJe/likes')
-
-  const data = await response.json()
-    console.log(data)
+  try {
+    const response = await fetch(
+      "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/MEyKHZs5GQJjgTbCoZJe/likes"
+    );
+    if (!response.ok) throw new Error("Cannot get likes");
+    const data = await response.json();
+    return data;
+  } catch (e) {
+    return e;
+  }
 }
 
 const updateLikeCount = async (itemId) => {
