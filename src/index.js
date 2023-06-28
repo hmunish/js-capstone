@@ -3,6 +3,19 @@ import logo from '../assets/logo.png';
 import fetchItems from './modules/fetchItems.js';
 import renderItems from './modules/renderItems.js';
 import renderCommentPopup from './modules/renderCommentPopup.js';
+// import {
+//   createComment,
+//   getComments,
+//   updateLikeCount,
+//   getLikes,
+// } from './modules/involvement.js';
+
+// const appId = "MEyKHZs5GQJjgTbCoZJe";
+
+// createComment(appId, 50, "Test", "Test Comment");
+// getComments(50);
+// updateLikeCount(50);
+// getLikes();
 
 const mainLogo = document.querySelector('.logo');
 const article = document.querySelector('.article');
