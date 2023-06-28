@@ -1,6 +1,5 @@
 const renderItems = async (parEle, dataArr, likeObj) => {
-  console.log(likeObj);
-  let html = "";
+  let html = '';
   dataArr.forEach((e, c) => {
     html += `<div class="item-box" data-itemNo="${c}">
         <img src="${e.image.medium}" alt="Item ${c}">

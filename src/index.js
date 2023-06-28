@@ -1,24 +1,25 @@
-import "./style.css";
-import logo from "../assets/logo.png";
-import fetchItems from "./modules/fetchItems.js";
-import renderItems from "./modules/renderItems.js";
-import renderCommentPopup from "./modules/renderCommentPopup.js";
+import './style.css';
+import logo from '../assets/logo.png';
+import fetchItems from './modules/fetchItems.js';
+import renderItems from './modules/renderItems.js';
+import renderCommentPopup from './modules/renderCommentPopup.js';
 import {
   getComments,
   updateLikeCount,
   getLikes,
-} from "./modules/involvement.js";
+} from './modules/involvement.js';
 
-const mainLogo = document.querySelector(".logo");
-const article = document.querySelector(".article");
+const mainLogo = document.querySelector('.logo');
+const article = document.querySelector('.article');
 
-let episodesData, likesObj;
+let episodesData;
+let likesObj;
 
 // Setting logo
-mainLogo.setAttribute("src", logo);
+mainLogo.setAttribute('src', logo);
 
 // Event listeners
-window.addEventListener("DOMContentLoaded", async () => {
+window.addEventListener('DOMContentLoaded', async () => {
   episodesData = await fetchItems();
   const likesData = await getLikes();
   // Coverting likes array to object for accessibility
@@ -30,28 +31,28 @@ window.addEventListener("DOMContentLoaded", async () => {
 });
 
 // Click event on article
-article.addEventListener("click", (e) => {
-  if (e.target.classList.contains("likeIcon")) {
-    e.target.classList.toggle("fa-heart-o");
-    e.target.classList.toggle("fa-heart");
+article.addEventListener('click', (e) => {
+  if (e.target.classList.contains('likeIcon')) {
+    e.target.classList.toggle('fa-heart-o');
+    e.target.classList.toggle('fa-heart');
     // Like feature will be added here
     const parentItemBox = e.target.parentElement.parentElement;
-    const itemNo = Number(parentItemBox.getAttribute("data-itemno"));
-    updateLikeCount(itemNo).then((res) => {
-      parentItemBox.querySelector("p").innerHTML = `Likes ${
+    const itemNo = Number(parentItemBox.getAttribute('data-itemno'));
+    updateLikeCount(itemNo).then(() => {
+      parentItemBox.querySelector('p').innerHTML = `Likes ${
         likesObj[itemNo] ? likesObj[itemNo] + 1 : 1
       }`;
     });
-  } else if (e.target.classList.contains("comments")) {
-    const existingPopup = document.querySelector("dialog");
-    existingPopup && existingPopup.remove();
-    const dataNo = e.target.parentElement.getAttribute("data-itemno");
+  } else if (e.target.classList.contains('comments')) {
+    const existingPopup = document.querySelector('dialog');
+    if (existingPopup) existingPopup.remove();
+    const dataNo = e.target.parentElement.getAttribute('data-itemno');
     getComments(dataNo)
       .then((res) => {
         renderCommentPopup(episodesData[dataNo], res);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        // Error will be handled here
       });
   }
 });

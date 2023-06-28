@@ -1,24 +1,24 @@
-import { appId, createComment } from "./involvement.js";
+import { appId, createComment } from './involvement.js';
 
 function removeCommentPopup(e) {
-  e.target.removeEventListener("click", removeCommentPopup);
-  document.querySelector("dialog").remove();
+  e.target.removeEventListener('click', removeCommentPopup);
+  document.querySelector('dialog').remove();
 }
 
 function addComment(e) {
   e.preventDefault();
   const username = e.target.userName.value;
-  const user_comment = e.target.userComment.value;
-  const dataId = e.target.getAttribute("data-id");
+  const userComments = e.target.userComment.value;
+  const dataId = e.target.getAttribute('data-id');
 
-  createComment(appId, dataId, username, user_comment).then((res) => {
+  createComment(appId, dataId, username, userComments).then(() => {
     const today = new Date();
     const html = `<p class="comments-text">${today.getFullYear()}-${
       today.getMonth() + 1
-    }-${today.getDate()} ${username}: ${user_comment}`;
+    }-${today.getDate()} ${username}: ${userComments}`;
     document
-      .querySelector(".comments-wrapper")
-      .insertAdjacentHTML("beforeend", html);
+      .querySelector('.comments-wrapper')
+      .insertAdjacentHTML('beforeend', html);
     e.target.reset();
   });
 }
@@ -70,25 +70,25 @@ function renderCommentPopup(dataObj, commentsArr) {
   </div>
 </dialog>`;
 
-  document.body.insertAdjacentHTML("beforeend", html);
+  document.body.insertAdjacentHTML('beforeend', html);
 
   // Adding comments for the popup
   if (commentsArr.length > 0) {
-    const commentsSection = document.querySelector(".comments-wrapper");
-    let commentsHtml = "";
+    const commentsSection = document.querySelector('.comments-wrapper');
+    let commentsHtml = '';
     commentsArr.forEach((e) => {
       commentsHtml += `<p class="comments-text">${e.creation_date} ${e.username}: ${e.comment}</p>`;
     });
-    commentsSection.insertAdjacentHTML("beforeend", commentsHtml);
+    commentsSection.insertAdjacentHTML('beforeend', commentsHtml);
   }
 
   // Adding event listener for submitting comment form
-  const commentForm = document.querySelector(".add-comment");
-  commentForm.addEventListener("submit", addComment);
+  const commentForm = document.querySelector('.add-comment');
+  commentForm.addEventListener('submit', addComment);
 
   //   Adding event listener on close icon for closing the popup on click
-  const closeIcon = document.querySelector(".popup-close-icon");
-  closeIcon.addEventListener("click", removeCommentPopup);
+  const closeIcon = document.querySelector('.popup-close-icon');
+  closeIcon.addEventListener('click', removeCommentPopup);
 }
 
 export default renderCommentPopup;
