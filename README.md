@@ -18,6 +18,16 @@
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 # 📖 [TVMAZE] <a name="about-project"></a>
 
@@ -65,7 +75,7 @@ Overall, the goal of the TVMAZE App is to create a seamless and enjoyable TV vie
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
--[Live here]()
+-[Live here](https://github.com/hmunish/js-capstone)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,3 +102,96 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 - git clone https://github.com/hmunish/js-capstone
+
+### Install
+
+Install this project with:
+
+- You need to install Chrome if you want to see it working locally
+
+### Usage
+
+To run the project, execute the following command:
+
+- npm run dev
+
+### Run tests
+
+To run tests, run the following command:
+
+- npm install webpack webpack-cli --save-dev 
+- npm install webpack webpack-cli html-webpack-plugin style-loader css-loader --save-dev"
+- npm install css-loader style-loader
+- npm install html-webpack-plugin 
+- npm run build
+- npm run dev
+
+### Deployment
+
+- npm run build
+- npm run dev
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Jalloh**
+
+- GitHub: [@aradradev](https://github.com/aradradev)
+- LinkedIn: [Abdourahmane Diallo](https://www.linkedin.com/in/abdoul-ramane-diallo-15b2a2262/)
+- Twitter: [@Abdoul_2023](https://twitter.com/Abdoul_2023)
+
+👤 **Munish**
+
+- GitHub: [@hmunish](https://github.com/hmunish)
+- LinkedIn: [Munish Halai](https://www.linkedin.com/in/munish-halai/)
+- Twitter: [@hmunish5](https://twitter.com/hmunish5)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Styling**
+- [ ] **Animation**
+- [ ] **Bundler**
+- [ ] **Date**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/hmunish/js-capstone/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project give it a ⭐️
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank all co-authors and contributors
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
