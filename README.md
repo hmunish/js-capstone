@@ -14,6 +14,7 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Video Demo ](#-video-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -78,6 +79,14 @@ Overall, the goal of the TVMAZE App is to create a seamless and enjoyable TV vie
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 -[Live here](https://github.com/hmunish/js-capstone)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- VIDEO DEMO -->
+
+## 🚀 Video Demo <a name="video-demo"></a>
+
+-[Live here](https://drive.google.com/file/d/1agr3v0rFQ--EsnEoaTipVifg2r1Xw7G4/view?usp=drive_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
