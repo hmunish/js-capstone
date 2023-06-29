@@ -1,4 +1,3 @@
-
 <a name="readme-top"></a>
 
 <div align="center">
@@ -50,6 +49,7 @@ The goal of the TVMAZE App is to provide users with a comprehensive platform for
 6. Social Interaction: Users can engage with other TV fans through comments, discussions, and forums. They can share their thoughts, participate in conversations, and connect with like-minded individuals who share their passion for TV shows.
 
 Overall, the goal of the TVMAZE App is to create a seamless and enjoyable TV viewing experience, offering a one-stop platform for TV show information, tracking, and community interaction.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -67,7 +67,9 @@ Overall, the goal of the TVMAZE App is to create a seamless and enjoyable TV vie
 
 ### Key Features <a name="key-features"></a>
 
-- **entry point for projects**
+- **Dynamic_loading_of_movies**
+- **Likes_counter**
+- **Display_comments_feature**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,10 +121,10 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-- npm install webpack webpack-cli --save-dev 
+- npm install webpack webpack-cli --save-dev
 - npm install webpack webpack-cli html-webpack-plugin style-loader css-loader --save-dev"
 - npm install css-loader style-loader
-- npm install html-webpack-plugin 
+- npm install html-webpack-plugin
 - npm run build
 - npm run dev
 
