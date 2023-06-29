@@ -8,9 +8,16 @@ function removeCommentPopup(e) {
 
 function addComment(e) {
   e.preventDefault();
-  const username = e.target.userName.value;
-  const userComments = e.target.userComment.value;
+  const username = e.target.userName.value.trim();
+  const userComments = e.target.userComment.value.trim();
   const dataId = e.target.getAttribute('data-id');
+
+  // Check if either the username or userComments is empty
+  if (!username || !userComments) {
+    // eslint-disable-next-line no-alert
+    alert('Please enter you name and comment.');
+    return;
+  }
 
   createComment(appId, dataId, username, userComments).then(() => {
     const today = new Date();
